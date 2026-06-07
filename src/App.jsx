@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Home, Search, ShieldCheck, Info, Truck, Menu, ChevronRight, RotateCcw } from "lucide-react";
+import logo from "./assets/gobab.png";
+import logo1 from "./assets/gobar.png";
 
 export default function App() {
   const [folio, setFolio] = useState("");
@@ -20,16 +22,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#f7f8f6] text-[#1f2933]" style={{ fontFamily: "Inter, Arial, Helvetica, sans-serif" }}>
-      <header className="bg-gradient-to-r from-[#7b1e3a] via-[#9f2241] to-[#611232] text-white shadow-lg">
+      <header className="bg-gradient-to-r from-[#611232] via-[#58102c] to-[#611232] text-white shadow-lg">  
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="flex items-center gap-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/25 bg-white/10 shadow-inner backdrop-blur">
-              <Truck className="h-8 w-8" />
-            </div>
-            <div>
-              <h1 className="text-3xl font-black tracking-tight">JAULAS</h1>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/80">Transporte y logística</p>
-            </div>
+         <div className="flex items-center">
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-24 w-auto object-contain"
+          />
           </div>
 
           <nav className="hidden items-center gap-9 text-[15px] font-semibold md:flex">
@@ -50,9 +50,9 @@ export default function App() {
             <Home className="h-5 w-5 text-[#9f2241]" />
             <span className="font-semibold">Inicio</span>
             <ChevronRight className="h-4 w-4 text-[#9aa4ad]" />
-            <span className="text-[#59636e]">Notaría logística</span>
+            <span className="text-[#59636e]">Validacion de documentos</span>
           </div>
-          <span className="hidden text-[#59636e] md:block">Versión: 2.6.1</span>
+  
         </div>
       </section>
 
@@ -61,13 +61,26 @@ export default function App() {
           <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-[#f7e9ee] to-transparent" />
           <div className="relative grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <p className="mb-3 inline-flex rounded-full border border-[#c9a96a]/40 bg-[#fbf4e8] px-4 py-1 text-sm font-bold text-[#7a5a19]">
-                Validación digital de transporte
-              </p>
-              <h2 className="text-4xl font-black tracking-tight text-[#20252b] md:text-5xl">
-                Validación de documentos digitales
-              </h2>
-              <div className="mt-5 h-1.5 w-20 rounded-full bg-[#c9a96a]" />
+              
+              <h2
+  className="tracking-tight md:text-5xl"
+  style={{
+    fontFamily: "Georgia, serif",
+    fontSize: "58px",
+    fontWeight: 700,
+    color: "#0b0d10",
+    textShadow: "2px 0 #0b0d10",
+    lineHeight: "1.1",
+  }}
+>
+  Validación de integridad y autoría de documentos firmados con la FIEL*
+</h2>
+
+<div className="relative my-6">
+  <div className="h-[1px] bg-[#d7d7d7]"></div>
+  <div className="absolute left-0 -top-[3px] h-[6px] w-16 bg-[#c9a96a]"></div>
+</div>
+              
               <p className="mt-6 max-w-2xl text-xl leading-8 text-[#4c5661]">
                 A través de esta opción, usted podrá validar si el documento digital que presentará ante la institución es válido.
               </p>
@@ -86,13 +99,15 @@ export default function App() {
                   </div>
                 </div>
                 <div className="absolute bottom-8 right-10 h-28 w-36 rounded-r-3xl rounded-tl-xl border border-[#879099] bg-gradient-to-b from-white to-[#d8dde0] shadow-2xl">
-                  <div className="ml-8 mt-5 h-10 w-20 rounded-lg bg-[#20252b]" />
-                  <div className="ml-8 mt-4 h-3 w-16 rounded-full bg-[#9aa4ad]" />
+                  
                 </div>
-                <div className="absolute bottom-4 left-20 h-14 w-14 rounded-full border-[10px] border-[#20252b] bg-[#8f989f]" />
-                <div className="absolute bottom-4 left-52 h-14 w-14 rounded-full border-[10px] border-[#20252b] bg-[#8f989f]" />
-                <div className="absolute bottom-4 right-16 h-14 w-14 rounded-full border-[10px] border-[#20252b] bg-[#8f989f]" />
-                <div className="absolute bottom-0 left-2 h-4 w-[520px] rounded-full bg-black/10 blur-sm" />
+                <embed
+  src="/HALO.pdf"
+  type="application/pdf"
+  width="100%"
+  height="100%"
+/>
+                
               </div>
             </div>
           </div>
@@ -178,34 +193,47 @@ export default function App() {
         </div>
       </main>
 
-      <footer className="mt-10 bg-gradient-to-r from-[#7b1e3a] via-[#9f2241] to-[#611232] text-white">
+      <footer className="mt-10 bg-gradient-to-r from-[#611232] via-[#58102c] to-[#611232] text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/25 bg-white/10">
-                <Truck className="h-8 w-8" />
-              </div>
+              
               <div>
-                <h2 className="text-3xl font-black">JAULAS</h2>
-                <p className="font-semibold uppercase tracking-[0.2em] text-white/80">Transporte y logística</p>
-              </div>
+                    <img
+                      src={logo}
+                       alt="Logo"
+                      className="h-20 object-contain"
+                      />
+                 </div>
             </div>
           </div>
           <div>
-            <h3 className="mb-4 font-black">Enlaces</h3>
-            <p className="mb-2 text-white/80">Participa</p>
-            <p className="mb-2 text-white/80">Publicaciones oficiales</p>
-            <p className="text-white/80">Marco jurídico</p>
+            <h3
+  style={{
+    fontFamily: "Inter, Arial, sans-serif",
+    fontSize: "20px",
+    fontWeight: 700,
+    color: "#FFFFFF",
+  }}
+>
+  Enlaces
+</h3>
+            <p className="mb-2 text-white/80">Datos abiertos de la SABG</p>
+            <p className="mb-2 text-white/80">Plataforma Nacional</p>
+            <p className="text-white/80">Alerta</p>
           </div>
           <div>
-            <h3 className="mb-4 font-black">¿Tienes dudas?</h3>
-            <p className="mb-2 text-white/80">Escríbenos</p>
-            <p className="text-white/80">Directorio</p>
+            <h3 style={{
+    fontFamily: "Inter, Arial, sans-serif",
+    fontSize: "20px",
+    fontWeight: 700,
+    color: "#FFFFFF",
+  }}  >¿Que es gob.mx?</h3>
+            <p className="mb-2 text-white/80">Portal de datos abiertos</p>
+            <p className="text-white/80">Terminos y Condiciones</p>
           </div>
         </div>
-        <div className="border-t border-white/10 px-6 py-5 text-center text-sm text-white/75">
-          Sistema demostrativo de administración de jaulas y transporte. Diseño académico actual, sin conexión a sistemas oficiales.
-        </div>
+        
       </footer>
     </div>
   );
