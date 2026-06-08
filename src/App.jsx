@@ -146,7 +146,7 @@ export default function App() {
     {/* Columna derecha */}
     <div>
       <iframe
-        src="public/descargaPDF.pdf"
+        src="/descargaPDF.pdf"
         title="Documento PDF"
         className="h-[700px] w-full rounded-xl border border-gray-200"
       />
