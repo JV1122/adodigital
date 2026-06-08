@@ -82,7 +82,12 @@ export default function App() {
 
     {/* Columna izquierda */}
     <div>
-      <p>Resumen del documento firmado</p>
+      <p style={{
+    
+    color: "#4A4A4A",
+    textShadow: "1px 0 #0b0d10",
+    
+  }}>Resumen del documento firmado</p>
       <p className="mt-4 text-lg leading-8 text-[#4c5661]" style={{
     fontFamily: "Open Sans, Arial, sans-serif",
     fontSize: "19px",
@@ -91,7 +96,7 @@ export default function App() {
     letterSpacing: "0.01em",
   }}>
         <strong className="text-[#20252b]">Folio:</strong>&nbsp;
-        8b8b2769-34b8-46f6-8738-7385c8aa368a
+        8b8b2769-34b8-46f6-8738-7385c8aa700a
       </p>
 
       <p className="mt-4 text-lg leading-8 text-[#4c5661]">
@@ -126,7 +131,7 @@ export default function App() {
     fontFamily: "Open Sans, Arial, sans-serif",
     fontSize: "19px",
     fontWeight: 400,
-    color: "#4A5568",
+    color: "#404752",
     letterSpacing: "0.01em",
   }}>
         
@@ -141,7 +146,7 @@ export default function App() {
     {/* Columna derecha */}
     <div>
       <iframe
-        src="/HALO.pdf"
+        src="/descargaPDF.pdf"
         title="Documento PDF"
         className="h-[700px] w-full rounded-xl border border-gray-200"
       />
