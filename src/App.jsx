@@ -147,7 +147,7 @@ export default function App() {
     <div>
       <iframe
         src="/descargaPDF.pdf"
-        title="Documento PDF"
+        title="descargaPDF"
         className="h-[700px] w-full rounded-xl border border-gray-200"
       />
     </div>
